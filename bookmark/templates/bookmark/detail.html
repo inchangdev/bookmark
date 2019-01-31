@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}-Detail{% endblock %}
+
+{% block content %}
+<table border="1">
+    <thead>
+        <tr>
+            <th>싸이트명</th>
+            <th>URL 주소</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>{{object.site_name}}</td>
+        <td>{{object.url}}</td>
+        <a href="{% url 'bookmark_list' %}">목록으로 가기</a>
+    </tr>
+</table>
+{% endblock %}
